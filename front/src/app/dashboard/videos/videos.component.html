@@ -1,0 +1,12 @@
+<div class="videos">
+  <div>
+    <ul>
+      <li *ngFor="let video of videos"><a (click)="play(video)">{{ video }}</a></li>
+    </ul>
+  </div>
+  <div>
+    <video controls autoplay #video>
+      <source #source src="" type="video/mp4"/>
+    </video>
+  </div>
+</div>

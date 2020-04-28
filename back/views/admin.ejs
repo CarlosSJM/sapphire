@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>-->
+
+    <ul id="videos" style="width: 360px; height: auto; border: 1px solid;">
+
+    </ul>
+    <br>
+    <video height="600" id="video" controls>
+        <source src="" type="video/mp4">
+    </video>
+
+    <script>
+        let videos = document.querySelector('#videos');
+        fetch('http://127.0.0.1:3000/videos', {
+            method: 'GET'
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            data.forEach(video=>{
+                let li = document.createElement('li');
+                let a = document.createElement('a');
+                a.innerText = video;
+                a.id = video;
+                a.href = "http://127.0.0.1:3000/video/" + video;
+
+                a.addEventListener('click', (e)=>{
+                    console.log(e.target.href);
+                    let source = document.querySelector('source');
+                    source.src = e.target.href;
+                    let video = document.querySelector('video');
+                    video.play();
+                });
+
+                li.appendChild(a);
+                videos.appendChild(li);
+            });
+        })
+        .catch(e=>console.error(e));
+    </script>
+</body>
+</html>

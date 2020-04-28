@@ -1,0 +1,52 @@
+.search-avatar {
+    margin: 0 1em 0 0;
+    flex: 1 1 33%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+    .search-block {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+        .search-block::before {
+            content: url('../../../assets/images/navbar/magnifier.svg');
+            width: 14px;
+            position: absolute;
+            left: 0
+        }
+
+        input[type="search"] {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            width: 200px;
+            margin: 0 1em 0 0;
+            padding: 8px 0 8px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem;
+            color: var(--azul);
+            border-bottom: 1px solid var(--azul);
+        }
+
+        .buscar {
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: var(--azul);
+            color: var(--gris-oscuro);
+            padding: 1em 2em;
+            border-radius: 3px;
+            font-weight: 800
+        }
+
+            .buscar:hover {
+                background: var(--amarillo)
+            }

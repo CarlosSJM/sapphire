@@ -1,0 +1,56 @@
+<section class="cuerpo">
+
+  <div class="perfil">
+    <div class="foto-perfil">
+      <img src="../../../assets/user/ff.jpg">
+    </div>
+    <p id="nombre-usuario">{{ getUserName() }}</p>
+  </div>
+
+  <div class="usuario">
+    <h2>Mi cuenta</h2>
+
+    <div class="grupos-info">
+
+      <div class="datos-usuario">
+
+        <details open>
+          <summary>Datos de Usuario</summary>
+          <div class="correo">
+            <p>Correo electrónico:</p>
+            <p><a href="#">micorreo@correo.com</a></p>
+          </div>
+          <div class="password">
+            <p>Contraseña: *********</p>
+          </div>
+          <p>Método de pago: tarjeta mastercard ************5676</p>
+          <p class="cambio-datos" id="facturas"><a href="#">Ver mis facturas</a></p>
+          <button class="cambio" id="cambiar-datos" href="#" (click)="iraDatos('#formulario-datos', true)">Cambiar datos</button>
+          <div id="formulario-datos" style="display: none">
+            <form action="" method="">
+              <input #email id="email" name="email" type="text" placeholder="Intoduce el nuevo correo con el que quieres registrarte">
+              <input #passwordold id="passwordold" name="passwordold" type="password" placeholder="Contraseña actual" >
+              <input #password id="passwordnueva" name="passwordnueva" type="password" placeholder="Nueva contraseña">
+              <input class="cambio" id="guardar-datos" type="submit" value="Guardar y actualizar" (click)="postUser(email.value, password.value); iraDatos('#formulario-datos', false); guardados()">
+            </form>
+          </div>
+          <p id="cancelacion"><a (click)="mostrarAlerta()">Cancelar suscripción</a></p>
+        </details>
+      </div>
+
+      <div class="datos-visionado">
+
+        <details open>
+          <summary>Información de visionado</summary>
+          <div class="visionado">
+            <p><a id="visionado" href="#">Últimas visualizaciones</a></p>
+            <p><a id="valoracion" href="#">Mis valoraciones</a></p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>

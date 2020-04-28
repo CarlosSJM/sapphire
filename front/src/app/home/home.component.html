@@ -1,0 +1,42 @@
+<app-user-navbar></app-user-navbar>
+
+<section class="carrusel">
+    <div class="overlay-grey">
+        <div class="contiene-video-stream">
+            <ul>
+                <h1>NOVEDADES SAPHIRE</h1>
+                <li *ngFor="let video of videos" id="vid01"><a (click)="play(video)">{{ video | slice:0:25 }}</a></li>
+            </ul>
+            <video controls autoplay #video poster="../../assets/images/slider-home/poster-01.jpg">
+                <source #source src="" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
+    <div class="button back" (click)="irAtras($event)"> < </div>
+    <div class="button forward" (click)="irAdelante($event)"> > </div>
+    <div class="img-carrusel">
+        <img [src]="img" alt="">
+    </div>
+</section> 
+
+<section class="pelis"> 
+    <section class="cualquiera">
+        <section class="seccion {{genero.name}}" *ngFor="let genero of generos">
+            <div class="contiene-title">
+                <h2 *ngIf="selectGenre(genero)">{{genero.name}}</h2>
+                <div class="linea-genero"></div>
+            </div>
+            <ngx-slick class="carousel" slickModal="slick-modal" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let pelicula of selectGenre(genero)" class="slide"  (click)="iraPeli(pelicula.id)">
+                    <div class="bloque-pelicula">
+                        <img [src]="pelicula.backdrop_path | pathApi" alt="" width="100%">
+                        <h3 (click)="iraPeli(pelicula.id)">{{ pelicula.original_title | slice:0:20 }}{{ pelicula.name | slice:0:20 }}</h3>
+                        <div class="overlay-pelicula"></div>
+                    </div>
+                </div>
+            </ngx-slick>
+        </section>
+    </section>
+</section>
+
+ 

@@ -1,0 +1,27 @@
+<app-user-navbar></app-user-navbar>
+<header class="header" [style.background-image]="sanitizeImage(movie.backdrop_path)">
+  <div class="capa-header"> 
+    <div class="contiene-header">
+        <div class="cartel">
+            <img src="{{ movie.poster_path | pathApi}}" alt="Cartel película">
+        </div>
+        <div class="pelicula">
+            <div class="valoracion">
+                <img src="../../assets/pelicula/SVG/star-fullfill.svg" alt="">
+                <img src="../../assets/pelicula/SVG/star-fullfill.svg" alt="">
+                <img src="../../assets/pelicula/SVG/star-fullfill.svg" alt="">
+                <img src="../../assets/pelicula/SVG/star-middlefill.svg" alt="">
+                <img src="../../assets/pelicula/SVG/star-nofill.svg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>{{ movie.title | slice:0:15}}</h1>
+                <h3>{{ movie.release_date }}</h3>
+                <div class="linea"></div>
+                <p>{{ movie.overview }}</p>
+                <button (click)="iraVideoPeli(movie.id)" id="verAhora" class="btn-pelicula">Ver ahora</button>
+                <button (click)="volverPelis()" id="volverHome" class="btn-pelicula">Volver</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</header>

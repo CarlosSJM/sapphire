@@ -1,0 +1,201 @@
+
+header{
+  background-color: black;
+  height: 75px;
+
+}
+
+details summary:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.menu-container{
+  width: 100%;
+  text-align: center;
+  display: flex;
+
+}
+.menu-item{
+  display: inline-block;
+  width: 9%;
+  text-align: center;
+
+}
+
+.menu-item a{
+  text-decoration: none;
+  color: white;
+  line-height: 75px;
+}
+
+#logo{
+  text-align: left;
+  float: left;
+}
+
+#logo img{
+  height: 80px;
+  padding: 8px 0px 8px 45px;
+}
+
+#buscar{
+  text-align: right;
+}
+
+#perfil{
+  text-align: right;
+}
+
+.cuerpo{
+  padding: 60px 120px 60px 120px;
+  background-color: #f2f2f2;
+}
+
+.perfil{
+  display: inline-block;
+  overflow: auto;
+  line-height: 200px;
+
+}
+
+#nombre-usuario{
+  float: right;
+  text-align: right;
+  padding-right: 60px;
+  font-weight: 800
+}
+
+.foto-perfil {
+  width:200px;
+  height:200px;
+  border-radius:100px;
+  overflow: hidden;
+  float: left;
+  margin-right: 60px;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: auto;
+  display: block
+}
+
+.foto-perfil:hover {
+  filter: grayscale();
+  border-radius:70px;
+  transition: all ease .2s
+}
+
+.usuario{
+  padding-top: 60px;
+}
+
+.usuario h2{
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.grupos-info summary{
+  margin-top: 2%;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.correo{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.password{
+  margin-bottom: 2%;
+  display: inline-block;
+}
+#pass{
+  font-size: 12px;
+}
+#facturas{
+  font-size: 12px;
+}
+
+#cambio{
+  background-color:#7e7e7e;
+  color: white;
+  font-size: 12px;
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#cancelacion{
+  color: white;
+  font-size: 12px;
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 20px;
+  float: right;
+}
+
+.grupos-info p{
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.grupos-info a{
+  color: #333333;
+}
+
+.datos-usuario{
+  padding-bottom: 30px;
+}
+
+.navegador{
+  position: relative;
+}
+
+.user {
+  justify-items: center;
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+  flex-flow: row wrap;
+  padding-right: 3%;
+  line-height: 75px;
+  align-items: center;
+
+}
+
+.user p {
+  color: var(--gris-claro);
+  padding: 0 1em 0 0
+}
+
+
+.foto-perfil-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease .2s;
+
+}
+
+.foto-perfil-nav img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.foto-perfil-nav:hover {
+  filter: grayscale();
+  border-radius: 20px;
+  transition: all ease .2s
+}
+
+.visionado p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

@@ -1,0 +1,8 @@
+<div class="search-avatar">
+  <div class="search-block">
+      <form (ngSubmit)="buscarPeli(userForm)" #userForm="ngForm" class="form-search">
+        <input type="search" name="pelicula" placeholder="Título..." required minlength="2" ngModel>
+        <input type="submit" class="buscar" value="Buscar">
+      </form> 
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.videos{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 86.7%;
+  margin: auto;
+  background-color: var(--blanco);
+}
+
+.videos ul{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  margin: 6rem;
+  overflow-y: scroll;
+  /*border: 1px solid;*/
+}
+
+.videos ul li{
+  list-style-type: none;
+}
+
+.videos ul li a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 11px;
+  color: var(--gris-oscuro);
+  cursor: pointer;
+}
+
+.videos video{
+  display: flex;
+  position: relative;
+  margin: 6rem;
+  width: 640px;
+  height: 480px;
+}

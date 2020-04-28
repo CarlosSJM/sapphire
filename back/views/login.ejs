@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div id="content">
+    <fieldset>
+        <legend>Inicio de sesión</legend>
+        <label for="user">User: </label>
+        <input type="text" id="user" required>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" required>
+
+        <input type="submit" id="send" value="Send">
+    </fieldset>
+    </div>
+    <script>
+      let sendButton = document.querySelector('#send');
+      sendButton.addEventListener('click', async()=>{
+        let user = document.querySelector('#user').value;
+        let password = document.querySelector('#password').value;
+
+        await fetch('http://127.0.0.1:3000/login', {
+          method: 'POST',
+          headers:{
+            'Content-Type': 'application/json'
+          },
+          body:JSON.stringify({
+            "user": user,
+            "password": password
+          })
+        })
+          .catch(e=>console.error(e.message));
+      });
+    </script>
+</body>
+</html>

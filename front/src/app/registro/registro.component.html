@@ -1,0 +1,20 @@
+<section class="section-registro">
+  <div class="contiene-registro">
+    <img src="../../assets/landing/logo-landing.svg" alt="Saphire">
+    <h1>COMPLETA TU REGISTRO</h1>
+    <form action="" method="">
+      <input #nombre id="nombre" name="nombre" type="text" placeholder="Nombre" required>
+      <input #apellidos id="apellidos" name="apellidos" type="apellidos" placeholder="Apellidos" required>
+      <input #password type="password" id="password" name="password" placeholder="Contraseña" required>
+      <input #dni type="text" id="dni" name="dni" placeholder="NIF" required>
+      <div class="middle">
+        <input #fechaNacimiento type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="" required>
+        <input #genero id="genero" name="genero" type="text" placeholder="Género" required>
+      </div>
+      <input #creditCard id="numero-tarjeta" name="numero-tarjeta" type="text" placeholder="Número de tarjeta" required>
+      <input type="checkbox" id="politicas" value="checkbox" required>
+      <label for="politicas">Si no cancelas la suscripción, Saphire dará por hecho que sigue en vigor y te cobrará la tarifa correspondiente (actual: 13,99 €) a través de tu método de pago cada mes.</label>
+      <input type="submit" value="SUSCRIBIRME" (click)="register(nombre.value, apellidos.value, password.value, dni.value, fechaNacimiento.value, genero.value, creditCard.value)">
+    </form>
+  </div>
+</section>

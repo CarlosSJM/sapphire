@@ -1,0 +1,80 @@
+<!--<app-header></app-header>
+<app-aside></app-aside>-->
+<div class="panel" #panel>
+
+  <span class="header">
+    <span>PANEL DE ADMINISTRACION</span>
+    <span id="date"></span>
+  </span>
+
+  <div class="dashboard" #dashboard>
+
+    <div class="users-search">
+      <h2>USUARIOS</h2>
+      <div class="search">
+        <form (ngSubmit)="getUserByName(formTitle)" #formTitle="ngForm">
+          <input type="text" name="nombre" id="search" minlength="50" maxlength="255" placeholder="buscar por nombre y apellidos" ngModel (ngModelChange)="suggest($event)">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+
+    <ul class="users" *ngIf="user">
+      <li [id]="user.id_usuario" class="user"> <!--  [id]="user.id_usuario" #id -->
+        <img class="user-avatar" src="assets/profile.jpg" alt="Imágen no disponible" />
+        <div>
+          <span id="user_name">{{ user.nombre + ' ' + user.apellidos }}</span>
+          <span id="created">{{ 'Creado hace ' + user.timeDiff + ' días.' }}</span>
+        </div>
+        <div class="edit_delete">
+          <button type="submit" #editButton id="edit">Editar</button>
+          <button type="submit" #deleteButton id="delete">Borrar</button>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="users" *ngIf="!user">
+      <li *ngFor="let user of users" [id]="user.id_usuario" class="user"> <!--  [id]="user.id_usuario" #id -->
+        <img class="user-avatar" src="assets/profile.jpg" alt="Imágen no disponible" />
+        <div>
+          <span id="user_name">{{ user.nombre + ' ' + user.apellidos }}</span>
+          <span id="created">{{ 'Creado hace ' + user.timeDiff + ' días.' }}</span>
+        </div>
+        <div class="edit_delete">
+          <button type="submit" #editButton id="edit">Editar</button>
+          <button type="submit" #deleteButton id="delete">Borrar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+
+
+<fieldset class="modal" #modal>
+  <form method="POST" action="" (ngSubmit)="saveUser(formModal)" #formModal="ngForm">
+    <div class="close">
+      <button type="button" #close id="close"> X </button>
+    </div>
+    <div class="user-data" #userData *ngIf="user">
+      <label for="id">ID: </label>
+      <input type="text" name="id" id="id" [(ngModel)]="user.id_usuario">
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" id="nombre" #nombre [(ngModel)]="user.nombre">
+      <label for="apellidos">Apellidos: </label>
+      <input type="text" name="apellidos" id="apellidos" #apellidos [(ngModel)]="user.apellidos">
+      <label for="dni">DNI: </label>
+      <input type="text" name="dni" id="dni" #dni [(ngModel)]="user.dni">
+      <label for="dir">Dirección: </label>
+      <input type="text" name="dir" id="dir" #dir [(ngModel)]="user.direccion">
+      <label for="email">Email: </label>
+      <input type="text" name="email" id="email" #email [(ngModel)]="user.email">
+      <label for="fechaNacimiento">Fecha nacimiento: </label>
+      <input type="date" name="fechaNacimiento" id="fechaNacimiento" #fechaNacimiento [ngModel]="user.fecha_nacimiento | date: 'yyyy-MM-dd'" (ngModelChange)="user.fecha_nacimiento = $event">
+
+      <input type="submit">
+    </div>
+  </form>
+</fieldset>
+

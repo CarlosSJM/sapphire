@@ -1,0 +1,12 @@
+<app-user-navbar></app-user-navbar>
+<section class="section-busqueda">
+  <div class="contiene-busqueda">
+    <ul>
+      <li *ngFor="let busqueda of busquedas">
+        <img [src]="busqueda.backdrop_path | pathApi" [alt]="">
+        <h3>{{ busqueda.title | slice:0:25}}</h3>
+        <button (click)="iraPeliculaBuscada(busqueda.id)">Ver Película</button>
+      </li>
+    </ul>
+  </div>
+</section>

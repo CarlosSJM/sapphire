@@ -1,0 +1,87 @@
+.section-dashboard {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-flow: row wrap;
+    color: #666666;
+}
+
+.header-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 2rem 4.5rem 0 4.5rem;
+
+}
+
+.article {
+    min-width: 40%;
+    background-color: #F2F2F2;
+    margin: 2.5rem;
+    padding: 2rem;
+}
+.article h2{
+    border-bottom: 1px solid #666666;
+}
+
+.article div{
+    margin: 1rem 0 0 0;
+}
+/*//////////////////////////// usuarios panel inicio/////////////////////////////////////*/
+
+.user-ini-panel1{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.user-ini-name1{
+    display: grid; 
+    align-items: center;
+    
+    padding-inline-start: 1rem;
+
+}
+/*///////////////////////////////////// peliculas panel inicial/////////////////////// */
+.film-ini-panel{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.film-ini-name1{
+    display: inline-grid;
+    align-items: center;
+    
+}
+
+/*///////////////////////////////////// fin peliculas panel inicial/////////////////////// */
+
+/*//////////////////////////facturas panel inicial//////////////////////*/
+.invoice-ini-panel{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.invoice-ini-name1{
+    display: inline-grid;
+    align-items: center;
+    
+}
+/*////////////////////////// fin facturas panel inicial//////////////////////*/
+
+/*////////////////////////Panel Busqueda Pelis/////////////////////*/
+.search-bbdd-film input[type="text"]{
+    position: relative;
+    width: 200px;
+    border: 5px solid white;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.search-bbdd-film button[type="submit"]{
+    border: 5px solid rgb(102,102,102);
+    border-radius: 5px;
+    background-color: rgb(102,102,102);
+    color: lightgray;
+    width: 100px;
+    font-family: 'Montserrat', sans-serif;
+}

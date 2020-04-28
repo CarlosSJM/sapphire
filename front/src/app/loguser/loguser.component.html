@@ -1,0 +1,13 @@
+<section class="section-loguser">
+  <div class="contiene-loguser">
+    <img src="../../assets/landing/logo-landing.svg" alt="Saphire">
+    <h1>INICIAR SESIÓN</h1>
+    <form action="" method="">
+      <input #name id="nombre" name="nombre" type="text" placeholder="Nombre de usuario" required>
+      <input #password id="password" name="password" type="password" placeholder="Contraseña" required>
+      <input type="checkbox" id="politicas" value="checkbox" required>
+      <label for="politicas">Recordar datos de inicio de sesión</label>
+      <input type="submit" value="ENTRAR" (click)="postUser(name.value, password.value)">
+    </form>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+.cuerpo{
+    padding: 60px 120px 60px 120px;
+    background-color: #f2f2f2;
+  }
+    /*#perfil{*/
+    /*  text-align: right;*/
+    /*}*/
+  
+    .perfil{
+      display: inline-block;
+      overflow: auto;
+      line-height: 200px;
+    }
+  
+      .foto-perfil {
+        width:200px;
+        height:200px;
+        border-radius:100px;
+        overflow: hidden;
+        float: left;
+        margin-right: 60px;
+      }
+  
+      .foto-perfil img {
+        width: 100%;
+        height: auto;
+        display: block
+      }
+  
+      .foto-perfil:hover {
+        filter: grayscale();
+        border-radius:70px;
+        transition: all ease .2s
+      }
+  
+      #nombre-usuario{
+        float: right;
+        text-align: right;
+        padding-right: 60px;
+        font-weight: 800
+      }
+  
+    .usuario{
+      padding-top: 60px;
+    }
+  
+    .usuario h2{
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 42px;
+    }
+  
+      .grupos-info summary{
+        margin-top: 2%;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 32px;
+      }
+  
+      .grupos-info p{
+        font-size: 16px;
+        line-height: 18px;
+      }
+  
+      .grupos-info a{
+        color: #333333;
+      }
+  
+        .datos-usuario{
+          padding-bottom: 30px;
+        }
+  
+          details summary:focus {
+            outline-color: transparent;
+            outline-style: none;
+          }
+  
+          .correo{
+            margin-top: 2%;
+            margin-bottom: 2%;
+          }
+  
+          .password{
+            margin-bottom: 2%;
+            display: inline-block;
+          }
+  
+          #facturas{
+            font-size: 12px;
+          }
+  
+          .cambio{
+            background-color:#7e7e7e;
+            color: white;
+            font-size: 12px;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 20px;
+          }
+  
+            .cambio:hover {
+              color: #333333;
+              background: var(--azul);
+              transition: all ease .3s
+            }
+  
+            form {
+              display: block;
+              width: 100%;
+              max-width: 500px;
+            }
+            input {
+              width: 100%;
+              padding: 2em 0 1em 0;
+              color: var(--gris-oscuro);
+              border: none;
+              border-bottom: 1px solid var(--gris-oscuro);
+              background: none;
+              outline: none;
+            }
+  
+          #cancelacion{
+            font-size: 12px;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 20px;
+            float: right;
+            text-decoration: underline;
+          }
+  
+            .visionado p {
+              margin-top: 2%;
+              margin-bottom: 2%;
+            }
+  

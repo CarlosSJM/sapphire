@@ -1,0 +1,91 @@
+<nav class="nav">
+    <div class="contiene-nav">
+        <div class="logo">
+            <img (click)="iraHome()" src="../assets/images/LOGO-SAPHIRE-USER.png" alt="Saphire Logo">
+        </div>
+        <app-search-movie></app-search-movie>
+        <button (click)="showFilters()" class="filter">+ filtros</button>
+        <div class="myID-block">
+            <p class="avatar">{{ getUserName() }}</p>
+            <div (click)="iraUser()" class="img-avatar">
+                <img [src]="avatar.img_src"> 
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="section-filters none Puntos">
+  <div class="contain-filters">
+    <div class="head-filters">
+      <h1>Filtrar búsqueda</h1>
+      <div (click)="closeMenu()" class="close-filters">
+        <img src="../../assets/images/navbar/close.png" alt="">
+      </div>
+    </div>
+    <form (ngSubmit)="queryMovie(userForm)" #userForm="ngForm" class="advanced-filters">
+      <div class="contain-advanced-filters">
+        <div class="bloque">
+          <select name="order" id="order" ngModel>
+            <option value="">Ordenar por</option>
+            <option value="popularity.desc">Más vistas</option>
+            <option value="popularity.asc">Menos vistas</option>
+            <option value="release_date.asc">Ultimos lanzamientos</option>
+            <option value="release_date.desc">Las más antiguo</option>
+            <option value="revenue.asc">Más taquilleras</option>
+            <option value="vote_average.asc">Las más votadas</option>
+            <option value="vote_average.desc">Las menos votadas</option>
+          </select>
+        </div>
+        <div class="bloque">
+          <select name="genreMovie" id="genreMovie" ngModel>
+            <option value="">Género</option>
+            <option value="28">Acción</option>
+            <option value="12">Aventura</option>
+            <option value="16">Animación</option>
+            <option value="80">Crimen</option>
+            <option value="18">Drama</option>
+            <option value="10751">Familiar</option>
+            <option value="14">Fantasia</option>
+            <option value="27">Terror</option>
+            <option value="9648">Misterio</option>
+            <option value="10749">Romance</option>
+            <option value="878">Ciencia Ficción</option>
+          </select>
+        </div>
+        <div class="bloque">
+          <select name="from" id="from" ngModel>
+            <option value="">Desde</option>
+            <option value="1970">1970</option>
+            <option value="1971">1971</option>
+            <option value="1972">1972</option>
+            <option value="1973">1973</option>
+            <option value="1974">1974</option>
+            <option value="1975">1975</option>
+            <option value="1976">1976</option>
+            <option value="1977">1977</option>
+            <option value="1978">1978</option>
+            <option value="1979">1979</option>
+            <option value="1980">1980</option>
+          </select>
+        </div>
+        <div class="bloque">
+          <select name="until" id="until" ngModel>
+            <option value="">Hasta</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+</div>
+

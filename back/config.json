@@ -1,0 +1,12 @@
+{
+  "http": {
+    "port": 3000
+  },
+  "db": {
+    "user": "root",
+    "password": "saphiredb"
+  },
+  "jwt": {
+    "api_key": "b5d81148-ce4b-4475-bff8-5ef4794af16c"
+  }
+}

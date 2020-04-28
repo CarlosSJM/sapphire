@@ -1,0 +1,91 @@
+.section-admin {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh
+}
+
+    .section-admin h1 {
+        margin: 2em 0 0 0;
+        font-family: 2rem;
+        line-height: 2.4rem;
+        color: var(--gris-oscuro)
+    }
+
+    .section-admin img {
+        width: 200px;
+        margin: 2em 0
+    }
+
+    form {
+        width: 100%;
+        max-width: 500px;
+        padding: 1em
+    }
+
+        #nombre, #password {
+            outline: none;
+            width: 100%;
+            padding: 2em 0 1em 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--gris-oscuro);
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--gris-oscuro)
+        }
+
+        #password {
+            margin-bottom: 2em;
+        }
+
+            #nombre::placeholder, #password::placeholder {
+                color: var(--gris-oscuro);
+                font-family: 'Montserrat', sans-serif;
+                font-size: .8rem
+            }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            outline: none;
+            width: 15px;
+            height: 15px;
+            margin: 0 .5em 0 0;
+            vertical-align: bottom;
+            border: 1px solid var(--gris-oscuro);
+            border-radius: 3px;
+            position: relative;
+            cursor: pointer
+        } 
+
+            input[type="checkbox"]:checked {
+                background: var(--gris-oscuro);
+                transition: all ease .3s
+            }
+
+            label {
+                color: var(--gris-oscuro);
+                font-size: .6rem
+            }
+
+
+        input[type="submit"] {
+            outline: none;
+            width: 100%;
+            margin: 2em 0;
+            padding: 1em 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--gris-oscuro);
+            background: transparent;
+            border: 1px solid var(--gris-oscuro);
+            border-radius: 5px;
+            cursor: pointer
+        }
+
+            input[type="submit"]:hover {
+                color: var(--blanco);
+                background: var(--gris-oscuro);
+                transition: all ease .3s
+            }  

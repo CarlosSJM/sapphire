@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+form{
+
+}
+
+fieldset{
+  width: 720px;
+  height: auto;
+  padding: 40px 20px 40px 20px;
+  margin: auto;
+}
+
+fieldset legend{
+  margin-left: 20px;
+}
+
+fieldset label{
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 20px;
+  display: block;
+}
+
+fieldset label{
+  cursor: pointer;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="range"]{
+  width: 220px;
+  height: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/*input:required:invalid{
+  border: 2px solid red;
+}*/
+
+input[type="submit"]{
+  width: 220px;
+  height: 100px;
+  margin-left: 20px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  display: block;
+}

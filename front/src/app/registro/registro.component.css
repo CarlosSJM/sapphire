@@ -1,0 +1,133 @@
+.section-registro {
+  background-image: url('../../assets/landing/img-fondo.jpg');
+  background-color: var(--gris-oscuro);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center
+}
+
+.contiene-registro {
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, .8);
+  color: var(--azul);
+  position: relative
+}
+
+.contiene-registro h1 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.contiene-registro img {
+  width: 200px;
+  margin: 2em 0
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  padding: 1em
+}
+
+#nombre, #password, #apellidos, #dni, #fechaNacimiento, #genero, #numero-tarjeta, #fecha, #ccv {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  padding: 2em 0 1em 0;
+  color: var(--azul);
+  border: none;
+  border-bottom: 1px solid var(--azul);
+  background: none;
+  outline: none
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  border-bottom: 1px solid var(--azul);
+  -webkit-text-fill-color: var(--azul);
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#nombre::placeholder, #password::placeholder, #apellidos::placeholder, #dni::placeholder, #fechaNacimiento::placeholder, #genero::placeholder, #numero-tarjeta::placeholder, #fecha::placeholder, #ccv::placeholder {
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem
+}
+
+.middle {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between
+}
+
+#fechaNacimiento, #genero {
+  width: 48%;
+}
+
+#numero-tarjeta {
+  margin-bottom: 2em
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  margin: 0 .5em 0 0;
+  border: 1px solid var(--azul);
+  vertical-align: bottom;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer
+}
+
+input[type="checkbox"]:checked {
+  background: var(--azul);
+  transition: all ease .3s
+}
+
+label {
+  color: var(--azul);
+  font-size: .6rem
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+}
+
+
+
+input[type="submit"] {
+  outline: none;
+  width: 100%;
+  margin: 2em 0;
+  padding: 1em 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--azul);
+  border: 1px solid var(--azul);
+  border-radius: 5px;
+  cursor: pointer
+}
+
+input[type="submit"]:hover {
+  color: var(--gris-oscuro);
+  background: var(--azul);
+  transition: all ease .3s
+}

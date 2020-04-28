@@ -1,0 +1,74 @@
+header{
+    background-color: black;
+    height: 75px;
+  }
+  
+    .navegador{
+      position: relative;
+    }
+  
+      .menu-container{
+        width: 100%;
+        text-align: center;
+        display: flex;
+      }
+        #logo{
+          text-align: left;
+          float: left;
+        }
+  
+        #logo img{
+          height: 80px;
+          padding: 8px 0px 8px 45px;
+        }
+  
+        .menu-item{
+          display: inline-block;
+          width: 9%;
+          text-align: center;
+        }
+  
+        .menu-item a{
+          text-decoration: none;
+          color: white;
+          line-height: 75px;
+        }
+  
+        .user {
+          justify-items: center;
+          display: inline-flex;
+          position: absolute;
+          right: 0;
+          flex-flow: row wrap;
+          padding-right: 3%;
+          line-height: 75px;
+          align-items: center;
+        }
+  
+        .user p {
+          color: var(--gris-claro);
+          padding: 0 1em 0 0
+        }
+  
+          .foto-perfil-nav {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all ease .2s;
+  
+          }
+  
+          .foto-perfil-nav img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+  
+          .foto-perfil-nav:hover {
+            filter: grayscale();
+            border-radius: 20px;
+            transition: all ease .2s
+          }
+  

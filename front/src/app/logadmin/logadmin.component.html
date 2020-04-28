@@ -1,0 +1,12 @@
+<section class="section-admin">
+  <img src="../../assets/admin/logo-admin-negro.svg" alt="Saphire">
+  <h1>PANEL DE ADMINISTRACIÓN</h1>
+  <form action="" method="">
+    <input #name id="nombre" name="nombre" type="text" placeholder="nombre" required>
+    <input #password id="password" name="password" type="password" placeholder="password" required>
+    <input type="checkbox" id="politicas" value="checkbox" required>
+    <label for="politicas">Recordar datos de inicio de sesión</label>
+<!--    <input (click)="iraDashboard()" type="submit" value="ENTRAR">-->
+    <input type="submit" value="ENTRAR" (click)="postAdmin(name.value, password.value)">
+</form>
+</section>
